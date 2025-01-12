@@ -1,6 +1,6 @@
 const put = document.querySelector("p");
 async function fetchData() {
-  const url = '/.netlify/functions/fetchData'; // Call the serverless function
+  const url = '/.functions/fetchData'; // Call the serverless function
 
   try {
     const response = await fetch(url);
