@@ -32,7 +32,7 @@ function positionget(){
 
 
 async function fetchData() {
-  const url = '/.functions/fetchData.js'; // Call the serverless function
+  const url = '/.functions/fetchData'; // Call the serverless function
 
   try {
     const response = await fetch(url);
