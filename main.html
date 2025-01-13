@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rhydmix: A music suggestion platform based on weather, mood, and relationship status.">
+    <title>RHYDMIX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Rhydmix.png" type="image/png">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><div class="navbar">
+            <div id="logo">
+                <img src="Rhydmix.png" alt="RHYDMIX LOGO">
+                <p id="logo-text">RHYDMIX</p>
+            </div>
+        </div></a>
+    </nav>
+    <main>
+        <div class="emoji-container">
+            <img class="emoji e1" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Sun%20Behind%20Cloud.png" alt="Sun Behind Cloud" width="25" height="25"  />
+            <img class="emoji e2" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Sun%20Behind%20Rain%20Cloud.png" alt="Sun Behind Rain Cloud" width="25" height="25"  />
+            <img class="emoji e3" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Sun%20with%20Face.png" alt="Sun with Face" width="25" height="25"/>
+            <img class="emoji e4" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Snowflake.png" alt="Snowflake" width="25" height="25" />
+            <img class="emoji e5" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Cloud%20with%20Lightning%20and%20Rain.png" alt="Cloud with Lightning and Rain" width="25" height="25" />
+            <img class="emoji e6" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Cloud%20with%20Lightning.png" alt="Cloud with Lightning" width="25" height="25" />
+        </div>
+        <section id="hero-section">
+            <div class="hero-card">
+                <div class="hero-content">
+                <h2>
+                    Get Your Music<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Musical%20Notes.png" alt="Musical Notes" width="25" height="25" class="emoji-in-text"/>Suggestions, according to the Weather <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Sun%20Behind%20Cloud.png" alt="Sun Behind Cloud" width="25" height="25" class="emoji-in-text"/>
+                    <br>Feel the Music according to your Mood
+                </h2>
+                <br><br>
+
+
+
+                <form id="preferences-form">
+                    <label for="Location">Enter Your Location📍:</label>
+                    <div class="input-loc"><input type="text" name="location" id="location-get" placeholder="Enter Location">
+                    <i class="fa-solid fa-location-dot" id="location-symbol"></i>
+                    <span id="loader-1" style="display: none;">⏳</span> 
+                    </div><br>
+                    <label for="Mood">How are you feeling?<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Pleading%20Face.png" alt="Pleading Face" width="25" height="25" /></label>
+                    <div class="button-group" id="mood-group">
+                        <button type="button">Happy</button>
+                        <button type="button">Sad</button>
+                        <button type="button">Excited</button>
+                        <button type="button">Rage</button>
+                        <button type="button">Relaxed</button>
+                    </div>
+                    <br>
+                    <label>Genre:</label>
+                    <div class="button-group" id="genre-group">
+                        <button type="button">Ghazal</button>
+                        <button type="button">Romance</button>
+                        <button type="button">Party</button>
+                        <button type="button">Evergreen 90's</button>
+                        <button type="button">Rap Music</button>
+                        <button type="button">Lo-Fi</button>
+                    </div>
+                    <br>
+                    <label>How's its going<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Winking%20Face.png" alt="Winking Face" width="25" height="25" />?</label>
+                    <div class="button-group" id="relationship-group">
+                        <button type="button">Single</button>
+                        <button type="button">Broken</button>
+                        <button type="button">Mingle</button>
+                    </div>
+                    <br>
+                    <label>Preffered Language:</label>
+                    <div class="button-group" id="language-group">
+                        <button type="button">Hindi</button>
+                        <button type="button">English</button>
+                        <button type="button">Punjabi</button>
+                        <button type="button">Haryanavi</button>
+                        <button type="button">Bhojpuri</button>
+                    </div>
+                    <br>
+                    <button type="submit" class="submit-btn"><i class="fa-brands fa-spotify"></i>Get Suggestions</button>
+                </form>
+                
+                
+                </div>
+            </div>
+        </section>
+    </main>
+    <br><br>
+    <section class="description">
+        <div class="usecase">
+            <div class="usecase-content">
+                <span ><p>How <p class="Rhydmix">RHYDMIX</p> works!</p></span>
+                <br>
+                <h2>Take a look at the Weather Inspired Music experience </h2>
+                <br>
+                <div class="about">
+                    <p >Wonder how <b>RHYDMIX</b> works.  We ask the Your Location📍 and checks out the Weather⛅ of the Area using the Weather API. Everyone have Different Moods😊, so we take Your Mood in record📖. At last, We also lookout if the Person is Single🙂, Broken💔 or Mingle💑.  The person can also Select the Genre(Classical🎹, Rock🎸, Modern🎻, Lo-Fi etc.).  
+                    Our Algorithm👩‍💻 then with the help of Spotify API Suggests you Personalised Music🎶</p>
+                </div>
+            </div>
+            <div class="playlist">
+                <div class="cards sun">
+                    <div class="card-emoji">
+                        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Sun%20with%20Face.png" alt="Sun with Face" width="25" height="25"/>
+                    </div>
+                    <div class="play-content">
+                        <h2>Sunny</h2>
+                        <br>
+                        <i>Chill Vibes,Energetic and Active,Cheerful</i>
+                        <br><br>
+                        <h4>Song for this Mood</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="cards fog">
+                    <div class="card-emoji">
+                        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Foggy.png" alt="Foggy" width="25" height="25" />
+                    </div>
+                    <div class="play-content">
+                        <h2>Foggy</h2>
+                        <br>
+                        <i>Cold, Romantic and Cozy, Calm </i>
+                        <br><br>
+                        <h4>Song for this Mood</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="cards rain">
+                    <div class="card-emoji">
+                        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Cloud%20with%20Lightning%20and%20Rain.png" alt="Cloud with Lightning and Rain" width="25" height="25" />
+                    </div>
+                    <div class="play-content">
+                        <h2>Stormy</h2>
+                        <br>
+                        <i>Rock,Tense and Chaotic, Dramatic and Romantic </i>
+                        <br><br>
+                        <h4>Song for this Mood</h4>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <footer>
+        <div class="footer-content">
+            <a href="index.html"><div class="logo-footer">
+                <img src="Rhydmix.png" alt="Rhydmix id="footer-img">
+                <h3>RHYDMIX</h3>
+            </div></a>
+            <div class="credits">
+                Built by <h3> NIKHIL SINGH </h3>.  Follow Me on 
+                "<a  class="linkedin"  href="https://www.linkedin.com/in/nikhil-singh-2785a32a2">
+                    <i class="fa-brands fa-linkedin-in"></i></a>" 
+                    and 
+                "<a class="github" href="https://github.com/nikhil-kodes/RHYDMIX">
+                        <i class="fa-brands fa-github"></i>
+                </a>"
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
