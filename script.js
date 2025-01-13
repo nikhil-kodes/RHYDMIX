@@ -65,7 +65,10 @@ if (sad.selected) {
 ////////////////////////////////////////////////////////
 //this is just for the  testing 
 
-submit.addEventListener("click", fetchData)
+submit.addEventListener("click", ()=>{
+    preventDefault();
+    fetchData;
+})
 async function fetchData() {
   const url = '/.netlify/functions/fetchData?${locationfill.value}'; // Call the serverless function
 
