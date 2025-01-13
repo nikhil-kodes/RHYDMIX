@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 exports.handler = async (event, context) => {
   const API_KEY = process.env.API_KEY; // Access the environment variable
-  const API_URL = `http://api.weatherapi.com/v1/current.json?api_key=${API_KEY}&q=greater noida&aqi=yes`;
+  const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=greater noida&aqi=yes`;
 
   try {
     const response = await fetch(API_URL);
