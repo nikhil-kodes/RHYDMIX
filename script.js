@@ -1,6 +1,18 @@
 const locationfill = document.getElementById("location-get");
 const locationicon = document.getElementById("location-symbol");
 const loader = document.getElementById("loader-1");
+const submit = document.getElementsByClassName("submit-btn");
+// const happy = document.getElementById("happy");
+// const sad = document.getElementById("sad");
+// const excited = document.getElementById("excited");
+// const rage = document.getElementById("rage");
+// const relaxed = document.getElementById("relaxed");
+// const romance = document.getElementById("romance");
+// const evergreen = document.getElementById("evergreen");
+// const lo_fi = document.getElementById("lo-fi");
+// const rap = document.getElementById("rap");
+// const ghazal = document.getElementById("ghazal");
+// const party = document.getElementById("party");
 
 locationicon.addEventListener("click" , positionget);
 
@@ -25,14 +37,37 @@ function positionget(){
     }
 };
 
+const button = document.querySelectorAll('.button-group button')
+button.forEach(button => {
+    button.addEventListener('click', () => {
+        const group = button.parentElement;
+        // Allow multiple selections
+        group.querySelectorAll('button').forEach(btn => btn.classList.remove('selected'));
+        button.classList.toggle('selected');
+    });
+});
 
+if (sad.selected) {
+    
+} else {
+    
+}
+
+    // Handle form submission
+// document.getElementById('preferences-form').addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     const location = document.getElementById('location').value;
+//     const selectedButtons = document.querySelectorAll('.selected');
+//     const preferences = [...selectedButtons].map(btn => btn.textContent);
+    
+//     });
 
 ////////////////////////////////////////////////////////
 //this is just for the  testing 
 
-
+submit.addEventListener("click", fetchData)
 async function fetchData() {
-  const url = '/.netlify/functions/fetchData'; // Call the serverless function
+  const url = '/.netlify/functions/fetchData?${locationfill.value}'; // Call the serverless function
 
   try {
     const response = await fetch(url);
@@ -42,5 +77,3 @@ async function fetchData() {
     console.error('Error fetching data:', error);
   }
 }
-
-fetchData();
