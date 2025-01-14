@@ -54,21 +54,22 @@ if (sad.selected) {
 }
 
     // Handle form submission
-// document.getElementById('preferences-form').addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     const location = document.getElementById('location').value;
-//     const selectedButtons = document.querySelectorAll('.selected');
-//     const preferences = [...selectedButtons].map(btn => btn.textContent);
+document.getElementById('preferences-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    fetchData;
+    const location = document.getElementById('location').value;
+    const selectedButtons = document.querySelectorAll('.selected');
+    const preferences = [...selectedButtons].map(btn => btn.textContent);
     
-//     });
+    });
 
 ////////////////////////////////////////////////////////
 //this is just for the  testing 
 
-submit.addEventListener("click", ()=>{
-    preventDefault();
-    fetchData;
-})
+// submit.addEventListener("click", ()=>{
+//     preventDefault();
+//     fetchData;
+// })
 async function fetchData() {
   const url = '/.netlify/functions/fetchData?${locationfill.value}'; // Call the serverless function
 
