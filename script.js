@@ -47,23 +47,26 @@ button.forEach(button => {
     });
 });
 
-if (sad.selected) {
+// if (sad.selected) {
     
-} else {
+// } else {
     
-}
+// }
 
     // Handle form submission
-document.getElementById('preferences-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const location_got = locationfill.value;
-    fetchData(location_got);
-    const location = document.getElementById('location').value;
-    const selectedButtons = document.querySelectorAll('.selected');
-    const preferences = [...selectedButtons].map(btn => btn.textContent);
+// document.getElementById('preferences-form').addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     const location_got = locationfill.value;
+//     fetchData(location_got);
+//     const location = document.getElementById('location').value;
+//     const selectedButtons = document.querySelectorAll('.selected');
+//     const preferences = [...selectedButtons].map(btn => btn.textContent);
     
-    });
-
+//     });
+document.getElementById("test-btn").addEventListener("click",()=>{
+    const posNew = locationfill.value;
+    fetchData(posNew);
+});
 ////////////////////////////////////////////////////////
 //this is just for the  testing 
 
@@ -71,8 +74,8 @@ document.getElementById('preferences-form').addEventListener('submit', (e) => {
 //     preventDefault();
 //     fetchData;
 // })
-async function fetchData(location_got) {
-  const url = `/.netlify/functions/fetchData?${location_got}`; // Call the serverless function
+async function fetchData(posNew) {
+  const url = `/.netlify/functions/fetchData?${posNew}`; // Call the serverless function
 
   try {
     const response = await fetch(url);
