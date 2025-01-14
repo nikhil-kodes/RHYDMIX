@@ -63,7 +63,7 @@ button.forEach(button => {
 //     const preferences = [...selectedButtons].map(btn => btn.textContent);
     
 //     });
-document.getElementById("test-btn").addEventListener("click",()=>{
+document.querySelector(".test-btn").addEventListener("click",()=>{
     const posNew = locationfill.value;
     fetchData(posNew);
 });
